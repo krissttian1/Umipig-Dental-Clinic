@@ -1,0 +1,66 @@
+<%@ Page Title="User Account CRUD" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BasicCrud_Espinase_Kristian._Default" %>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+
+
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
+
+            <table class="table">
+                <tr>
+                    <td>First Name:</td>
+                    <td><asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><asp:TextBox ID="txtLastName" runat="server" CssClass="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><asp:TextBox ID="txtAge" runat="server" CssClass="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Birthday:</td>
+                    <td><asp:TextBox ID="txtBirthday" runat="server" CssClass="form-control" TextMode="Date" /></td>
+                </tr>
+                <tr>
+                    <td>Contact Number:</td>
+                    <td><asp:TextBox ID="txtContact" runat="server" CssClass="form-control" /></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Button ID="btnAdd" runat="server" Text="Add" CssClass="btn btn-success" OnClick="btnAdd_Click" />
+                        <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-warning" OnClick="btnUpdate_Click" Enabled="false" />
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-default" OnClick="btnClear_Click" />
+                    </td>
+                </tr>
+            </table>
+
+            <hr />
+
+<asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" CssClass="table table-bordered"
+    OnRowDeleting="gvUsers_RowDeleting" OnSelectedIndexChanged="gvUsers_SelectedIndexChanged">
+    <Columns>
+        <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" />
+        <asp:BoundField DataField="FirstName" HeaderText="First Name" />
+        <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+        <asp:BoundField DataField="Age" HeaderText="Age" />
+        <asp:BoundField DataField="Birthday" HeaderText="Birthday" />
+        <asp:BoundField DataField="Contact" HeaderText="Contact" />
+        <asp:BoundField DataField="Address" HeaderText="Address" />
+        <asp:CommandField ShowSelectButton="True" SelectText="Edit" />
+        <asp:CommandField ShowDeleteButton="True" DeleteText="Delete" />
+    </Columns>
+</asp:GridView>
+
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>

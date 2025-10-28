@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://localhost/Thesis/appointment_module.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dental Clinic Appointment System</title>
+      <link href="./Dental Clinic Appointment System_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./Dental Clinic Appointment System_files/appointment_module.css">
+  <style>
+    table select, table input[type="time"], table input[type="date"], table input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      padding: 4px;
+      font-size: 14px;
+    }
+    .update-btn {
+      cursor: pointer;
+      padding: 6px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    .update-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      width: 300px;
+    }
+    .modal-content label {
+      display: block;
+      margin-top: 10px;
+    }
+    .modal-content input, .modal-content select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+    }
+    .modal-content button {
+      margin-top: 15px;
+      padding: 8px 12px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .modal-content .close-btn {
+      background-color: #dc3545;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="./Dental Clinic Appointment System_files/UmipigDentalClinic_Logo.jpg" alt="Umipig Dental Clinic">
+            </div>
+            <div class="clinic-info">
+                <h1>Umipig Dental Clinic</h1>
+                <p>General Dentist, Orthodontist, Oral Surgeon &amp; Cosmetic Dentist</p>
+            </div>
+        </div>
+
+
+        <div class="header-right">
+                            <span class="welcome-text">
+                    Welcome, ADMIN! &nbsp; | &nbsp;
+                    <a href="http://localhost/Thesis/logout.php" class="auth-link">Logout</a>
+                </span>
+                    </div>
+    </header>
+
+
+ <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- ☰ menu icon shown only when sidebar is collapsed -->
+            <div class="menu-icon">☰</div>
+            <ul class="nav-menu">
+               <li class="nav-item">
+                     <a href="http://localhost/Thesis/admin_dashboard.php" class="nav-link">Dashboard</a>
+               </li>
+               <li class="nav-item">
+                     <a href="http://localhost/Thesis/appointment_module.php" class="nav-link">Appointment Management</a>
+               </li>
+                <li class="nav-item"><span>Patient Records</span></li>
+                <li class="nav-item"><span>Reports</span></li>
+                <li class="nav-item"><span>Documents / Files</span></li>
+                <li class="nav-item"><span>Billing Records</span></li>
+                <li class="nav-item"><span>Calendar</span></li>
+                <li class="nav-item"><span>Tasks &amp; Reminders</span></li>
+                <li class="nav-item"><span>System Settings</span></li>
+            </ul>
+        </div>
+
+
+<div class="container">
+  <div class="header">
+    <h1>Dental Appointments</h1>
+    <button id="newAppointmentBtn">Add Appointment</button>
+  </div>
+
+  
+  <div class="appointment-table-container">
+    <table id="appointmentTable">
+      <thead>
+        <tr>
+          <th>TIME</th>
+          <th>DATE</th>
+          <th>PATIENT</th>
+          <th>DENTIST</th>
+          <th>PROCEDURE</th>
+          <th>STATUS</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="appointmentList">
+                  <tr><td colspan="7">No appointments found.</td></tr>
+              </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Add Appointment Modal -->
+<div id="appointmentModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h3>Add New Appointment</h3>
+    <form method="POST" action="http://localhost/Thesis/appointment_module.php" id="appointmentForm">
+      <input type="hidden" name="form_type" value="add">
+      
+      <label for="appt_time">Time:</label>
+      <input type="time" id="appt_time" name="appt_time" required="">
+
+      <label for="appt_date">Date:</label>
+      <input type="date" id="appt_date" name="appt_date" required="">
+
+      <label for="patient_name">Patient Name:</label>
+      <input type="text" id="patient_name" name="patient_name_custom" required="" placeholder="Enter patient name">
+
+      <label for="dentist_name">Dentist Name:</label>
+      <select id="dentist_name" name="dentist_name" required="">
+        <option value="">Select Dentist</option>
+                  <option value="4">Dr. John Jimenez</option>
+                  <option value="5">Dr. Lester Cruz</option>
+                  <option value="3">Dr. Ramon De Guzman</option>
+                  <option value="2">Dra. Alyssa Quiambao</option>
+                  <option value="1">Dra. Aurea Umipig</option>
+              </select>
+
+<label for="procedure">Procedure:</label>
+<select id="procedure" name="procedure" required="">
+    <option value="">Select Service</option>
+    <option value="cleaning">Dental Cleaning</option>
+    <option value="checkup">Regular Checkup</option>
+    <option value="orthodontics">Orthodontics</option>
+    <option value="emergency">Emergency Care</option>
+    <option value="root_canal">Root Canal</option>
+    <option value="cosmetic_dentistry">Cosmetic Dentistry</option>
+    <option value="dental_implants">Dental Implants</option>
+    <option value="teeth_whitening">Professional Teeth Whitening</option>
+    <option value="pediatric_dentistry">Pediatric Dentistry</option>
+    <option value="dentures">Dentures</option>
+    <option value="gum_disease">Gum Disease Treatment</option>
+    <option value="wisdom_teeth">Wisdom Teeth Extraction</option>
+    <option value="crowns_bridges">Dental Crowns &amp; Bridges</option>
+    <option value="tmj_treatment">TMJ Treatment</option>
+    <option value="sealants">Dental Sealants</option>
+    <option value="fluoride_treatment">Fluoride Treatment</option>
+</select>
+
+
+      <label for="status">Status:</label>
+      <select id="status" name="status" required="">
+        <option value="Pending">Pending</option>
+        <option value="Confirmed">Confirmed</option>
+        <option value="Completed">Completed</option>
+        <option value="Cancelled">Cancelled</option>
+      </select>
+
+      <button type="submit">Add Appointment</button>
+      <button type="button" id="closeModal" class="close-btn">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('appointmentModal');
+  const openBtn = document.getElementById('newAppointmentBtn');
+  const closeBtn = document.getElementById('closeModal');
+
+  openBtn.onclick = () => {
+    modal.style.display = 'flex';
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+</script>
+
+
+
+</div></body></html>
