@@ -1,0 +1,388 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0rem;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #ecf5ff;
+    width: 100%;
+    box-sizing: border-box;
+    position: page;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .logo-circle img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+.clinic-info h1 {
+    font-size: 15px;
+    text-align: left;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.clinic-info p {
+    font-size: 10px;
+    color: #555;
+    margin: 0;
+}
+
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+    .main-nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+        font-size: 12px;
+        transition: color 0.3s;
+    }
+
+        .main-nav a:hover {
+            color: #0066cc;
+        }
+
+.main-nav a.active {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+    .auth-link:hover {
+        color: #003d80;
+    }
+
+.header-right span {
+    color: black;
+    font-size: 10px;
+}
+
+.welcome-text {
+    font-weight: 700;
+    font-size: 12px;
+    color: #003366;
+}
+
+.welcome-text .auth-link {
+    font-weight: 600;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.welcome-text .auth-link:hover {
+    color: #003d80;
+}
+
+
+
+.contact-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+ 
+}
+
+.contact-text {
+    flex: 1;
+    max-width: 700px;
+}
+
+    .contact-text h2 {
+        font-size: 2rem;
+        color: #1d6d96;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-text p {
+        font-size: 1rem;
+        color: #333;
+        font-style: italic;
+    }
+
+
+#contactForm {
+    margin-top: 150px;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    justify-content: center;
+   
+}
+
+.form-group {
+    text-align: left;
+    
+}
+
+input, textarea {
+    padding: 0.5rem;
+    width: 250px;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    width: 520px;
+    resize: both;
+    margin-top: 0.25rem;
+}
+
+.form-column {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form-button {
+    text-align: center;
+    color: black;
+}
+
+button {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+    button:hover {
+        background-color: royalblue;
+    }
+
+
+
+
+.visit-us {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+    font-family: Arial, sans-serif;
+    color: #1d1d1d;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    
+}
+
+    .visit-us h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 80px;
+        font-size: 2rem;
+        color: #1d6d96;
+    }
+
+.map-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.visit-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+    .visit-info > div {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .visit-info h4 {
+        margin-bottom: 0.5rem;
+        color: #1d6d96;
+        font-size: 1.2rem;
+    }
+
+    .visit-info p,
+    .visit-info li {
+        margin: 0.3rem 0;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+.get-directions-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: dodgerblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-bottom: 50px;
+}
+
+    .get-directions-btn:hover {
+        background-color: royalblue;
+    }
+
+
+/* Footer */
+.footer {
+    background-color: #1d6d96;
+    color: white;
+    padding: 2rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.footer-left {
+    flex: 1;
+    min-width: 750px;
+}
+
+.clinic-branding {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.clinic-branding h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.clinic-branding p {
+    margin: 0.3rem 0 0;
+    font-size: 0.95rem;
+    color: #e5f1f7;
+}
+
+
+.footer-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-info {
+    margin: 0.2rem 0 0;
+    word-break: break-word;
+}
+
+    .contact-info a {
+        color: #d0e9ff;
+        text-decoration: underline;
+    }
+
+
+.footer-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
