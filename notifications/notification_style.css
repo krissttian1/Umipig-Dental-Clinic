@@ -1,0 +1,199 @@
+/* Notification Container */
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+/* Notification Dropdown */
+.notification-dropdown-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 350px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.notification-dropdown {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notification-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+}
+
+.notification-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.notification-count {
+    background: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.notification-list {
+    padding: 0;
+}
+
+.notification-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.notification-item:hover {
+    background: #f8f9fa;
+}
+
+.notification-item.unread {
+    background: #f0f7ff;
+}
+
+.notification-icon {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.notification-message {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.notification-time {
+    color: #999;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.notification-dot {
+    width: 8px;
+    height: 8px;
+    background: #3498db;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.no-notifications {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+}
+
+.notification-footer {
+    padding: 12px 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.view-all, .mark-all-read {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.mark-all-read {
+    background: none;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.notification-actions {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-form {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.btn-approve {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-reject {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.reject-reason {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 120px;
+}
+
+.btn-approve:hover {
+    background: #218838;
+}
+
+.btn-reject:hover {
+    background: #c82333;
+}
