@@ -1,0 +1,600 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: #3b82f6;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: #2563eb;
+    }
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.separator {
+    height: 4px;
+    background-color: #1e40af;
+    width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #ecf5ff;
+    width: 100%;
+    box-sizing: border-box;
+    position: page;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+    .logo-circle img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+.clinic-info h1 {
+    font-size: 15px;
+    text-align: left;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.clinic-info p {
+    font-size: 10px;
+    color: #555;
+    margin: 0;
+}
+
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+    .main-nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+        font-size: 12px;
+        transition: color 0.3s;
+    }
+
+        .main-nav a:hover {
+            color: #0066cc;
+        }
+
+.main-nav a.active {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.auth-link {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+    .auth-link:hover {
+        color: #003d80;
+    }
+
+.header-right span {
+    color: black;
+    font-size: 10px;
+}
+
+
+.welcome-text {
+    font-weight: 700;
+    font-size: 12px;
+    color: #003366;
+}
+
+.welcome-text .auth-link {
+    font-weight: 600;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.welcome-text .auth-link:hover {
+    color: #003d80;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/LandingPage-Background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    padding: 90px;
+    gap: 200px;
+    margin-left: 25px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+    .hero-text h2 {
+        font-size: 30px;
+        color: #111827;
+    }
+
+.hero-description {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.hero-subtext {
+    color: #4b5563;
+}
+
+.appointment-card {
+    background-color: white;
+    width: 120%;
+    height: 300px;
+    padding: 35px;
+    margin-top: 50px;
+    border-radius: 15px;
+    opacity: 0.9;
+    justify-content: flex-end;
+}
+
+.appointment-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+    .appointment-header h3 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        color: #111827;
+    }
+
+    .appointment-header p {
+        font-size: 1.2rem;
+        color: #3b82f6;
+        margin-top: 0.5rem;
+    }
+
+.appointment-button {
+    width: 100%;
+    padding: .9rem 0;
+    font-size: 20px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    
+}
+
+    .appointment-button:hover {
+        background-color: #1d4ed8;
+        transform: scale(1.05);
+    }
+
+/* Carousel Section */
+.carousel-section {
+    background-color: white;
+    padding: 1rem 0;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+    .carousel-section h2 {
+        font-size: 1.875rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        color: #111827;
+    }
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 2px auto;
+    padding: 4rem 3rem;
+    height: 500px;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+}
+
+.carousel-slide {
+    flex: 0 0 33.3333%; /* 3 slides per view */
+    padding: 0 4.75rem;
+    box-sizing: border-box;
+   
+}
+
+    .carousel-slide img {
+        width: 90%;
+        height: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        max-width: 100%;
+        max-height: 120%;
+        display: block;
+        margin-left: 20px;
+    }
+
+
+.carousel-button-left,
+.carousel-button-right {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.carousel-button-left {
+    left: 1rem;
+    margin-left: 5px;
+}
+
+.carousel-button-right {
+    right: 1rem;
+    margin-right: 5px;
+}
+
+    .carousel-button-left:hover,
+    .carousel-button-right:hover {
+        background-color: #f3f4f6;
+    }
+
+    .carousel-button-left svg,
+    .carousel-button-right svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #3b82f6;
+    }
+
+
+
+.services-section {
+    background-color: #dbeafe;
+    padding: 80px;
+}
+
+    .services-section h2 {
+        font-size: 45px;
+        text-align: center;
+        margin-bottom: 80px;
+        color: #111827;
+    }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+}
+
+
+.services-grid .service-card p {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+
+.service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: cover;
+}
+
+
+
+.service-image {
+    margin-bottom: 3rem;
+    
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .service-image img {
+        max-height: 100%;
+        width: 100%;
+    }
+
+.service-card h3 {
+    font-size: 15px;
+    text-align: center;
+}
+
+.services-grid .service-card h4 {
+    font-size: 20px;
+    color: royalblue;
+    font-weight: 700;
+}
+
+
+.service-text {
+    color: darkblue;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.service-info {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 15px;
+
+}
+
+.footer {
+    background-color: #1d6d96;
+    color: white;
+    padding: 2rem 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Left section */
+.footer-left {
+    flex: 1;
+    min-width: 750px;
+}
+
+.clinic-branding {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+.clinic-branding h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.clinic-branding p {
+    margin: 0.3rem 0 0;
+    font-size: 0.95rem;
+    color: #e5f1f7;
+}
+
+
+.footer-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-info {
+    margin: 0.2rem 0 0;
+    word-break: break-word;
+}
+
+    .contact-info a {
+        color: #d0e9ff;
+        text-decoration: underline;
+    }
+
+
+.footer-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Fade-in effect for sections */
+.fade-section {
+    opacity: 0;
+    transform: translateX(-150px); /* Starts off-screen */
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+    /* When visible, bring the section into view */
+    .fade-section.visible[data-direction="left"] {
+        opacity: 1;
+        transform: translateX(0); /* Move to its original position */
+    }
+
+    .fade-section.visible[data-direction="right"] {
+        opacity: 1;
+        transform: translateX(0); /* Move to its original position */
+    }
+
+    .fade-section[data-direction="left"] {
+        transform: translateX(-150px); /* Off-screen to the left */
+    }
+
+    .fade-section[data-direction="right"] {
+        transform: translateX(150px); /* Off-screen to the right */
+    }
+
+
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+    }
+
+    .header-logo {
+        margin-bottom: 0;
+    }
+
+    .header-nav {
+        flex-direction: row;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+        width: auto;
+        height: 450px;
+    }
+
+    .carousel-slide {
+        padding: 0 0.5rem;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-contact {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 3rem;
+    }
+}

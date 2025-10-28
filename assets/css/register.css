@@ -1,0 +1,289 @@
+body {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #ecf5ff;
+  width: 100%;
+  box-sizing: border-box;
+  position: page;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-circle img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.clinic-info h1 {
+  font-size: 15px;
+  text-align: left;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.clinic-info p {
+  font-size: 10px;
+  color: #555;
+  margin: 0;
+}
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #0066cc;
+}
+
+.header-right {
+  display: flex;
+  gap: 20px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 12px;
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #003d80;
+}
+
+.header-right span {
+  color: black;
+  font-size: 10px;
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #005288;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.right-icons i {
+  font-size: 22px;
+  margin-left: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.right-icons i:hover {
+  color: #007bff;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+body {
+  background-image: url('https://i.pinimg.com/736x/9a/88/8a/9a888a77d3c620d892cc25d7ee8d2b26.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background: #fff;
+  background-position: center;
+  padding: 40px;
+  border-radius: 20px;
+  width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.gender-group {
+  grid-column: 1 / 3;
+}
+
+.gender-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.register-btn {
+  grid-column: 1 / 3;
+  padding: 12px;
+  font-size: 16px;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  opacity: 0.9;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px rgba(116, 235, 213, 0.6);
+  transition: 0.3s ease-in-out;
+}
+
+.form-group label,
+.gender-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+.gender-options input[type="radio"] {
+  accent-color: #74ebd5;
+  transform: scale(1.2);
+}
+
+.register-btn {
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.container:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease-in-out;
+}
+
+form input,
+.gender-options label,
+.register-btn {
+  transition: all 0.3s ease;
+}
+
+.right-icons i {
+  transform: scale(1);
+}
+.right-icons i:hover {
+  transform: scale(1.2);
+}
+
+.top-bar {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}

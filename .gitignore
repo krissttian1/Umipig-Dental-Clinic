@@ -1,0 +1,45 @@
+# Dependencies
+/node_modules
+/vendor
+
+# Build outputs
+/assets/css/output.css
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+.phpunit.result.cache
+.phpunit.cache
+
+# Composer
+composer.lock
+composer.phar
+
+# Debug
+/debug.log
+
+# Cache
+.cache/
+
+# Misc
+.DS_Store
+*.sublime-*
